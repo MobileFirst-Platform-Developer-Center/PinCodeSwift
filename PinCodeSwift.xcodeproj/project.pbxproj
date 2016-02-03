@@ -13,6 +13,7 @@
 		19643DD91C620A200055D883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19643DD81C620A200055D883 /* Assets.xcassets */; };
 		19643DDC1C620A200055D883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19643DDA1C620A200055D883 /* LaunchScreen.storyboard */; };
 		19643DE41C620BE70055D883 /* mfpclient.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19643DE31C620BE70055D883 /* mfpclient.plist */; };
+		19643DE61C6217380055D883 /* PinCodeChallengeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19643DE51C6217380055D883 /* PinCodeChallengeHandler.swift */; };
 		A792C8DD90EFA265C34560E3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4656CFF302C17A6F1A531937 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		19643DDB1C620A200055D883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19643DDD1C620A200055D883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19643DE31C620BE70055D883 /* mfpclient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mfpclient.plist; sourceTree = "<group>"; };
+		19643DE51C6217380055D883 /* PinCodeChallengeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeChallengeHandler.swift; sourceTree = "<group>"; };
 		4656CFF302C17A6F1A531937 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47546CD5F24CB08F037004C4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8EA90B8B4DF479E2CE8B78C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				19643DD81C620A200055D883 /* Assets.xcassets */,
 				19643DDA1C620A200055D883 /* LaunchScreen.storyboard */,
 				19643DDD1C620A200055D883 /* Info.plist */,
+				19643DE51C6217380055D883 /* PinCodeChallengeHandler.swift */,
 			);
 			path = PinCodeSwift;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19643DE61C6217380055D883 /* PinCodeChallengeHandler.swift in Sources */,
 				19643DD41C620A200055D883 /* ViewController.swift in Sources */,
 				19643DD21C620A200055D883 /* AppDelegate.swift in Sources */,
 			);
