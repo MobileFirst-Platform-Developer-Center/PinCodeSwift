@@ -329,6 +329,7 @@
 			baseConfigurationReference = 47546CD5F24CB08F037004C4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PinCodeSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.PinCodeSwift;
@@ -341,6 +342,7 @@
 			baseConfigurationReference = 8EA90B8B4DF479E2CE8B78C0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PinCodeSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.PinCodeSwift;
