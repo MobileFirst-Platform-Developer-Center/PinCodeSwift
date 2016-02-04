@@ -29,12 +29,12 @@ class PinCodeChallengeHandler : WLChallengeHandler {
         NSLog("%@",challenge)
         var errorMsg : String
         if challenge["errorMsg"] is NSNull {
-            errorMsg = "This data required a PIN code."
+            errorMsg = "This data requires a PIN code."
         }
         else{
             errorMsg = challenge["errorMsg"] as! String
         }
-        let remainingAttempts : Int = challenge["remainingAttempts"] as! Int
+        let remainingAttempts = challenge["remainingAttempts"] as! Int
         
         showPopup(errorMsg,remainingAttempts: remainingAttempts)
     }

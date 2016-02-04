@@ -48,7 +48,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="qBA-oC-Lly" secondAttribute="leading" id="pnJ-gr-nLG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ipR-1g-Cof"/>
+                    <navigationItem key="navigationItem" title="PIN Code" id="ipR-1g-Cof"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBI-v8-mLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
