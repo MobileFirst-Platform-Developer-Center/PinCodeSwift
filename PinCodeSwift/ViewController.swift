@@ -10,6 +10,7 @@ import UIKit
 import IBMMobileFirstPlatformFoundation
 
 class ViewController: UIViewController {
+    @IBOutlet weak var balanceLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,25 +27,14 @@ class ViewController: UIViewController {
         request.sendWithCompletionHandler { (response, error) -> Void in
             if(error == nil){
                 NSLog(response.responseText)
-                self.alert("Success", msg: "Balance = " + response.responseText)
+                self.balanceLabel.text = "Balance = " + response.responseText
                 
             }
             else{
                 NSLog(error.description)
-                self.alert("Failure", msg: error.description)
+                self.balanceLabel.text = "Failed to get balance"
             }
         }
-        
-    }
-    
-    func alert(alertTitle: String, msg:String){
-        let alert = UIAlertController(title: alertTitle, message: msg, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK",
-            style: .Default,
-            handler: nil))
-        self.presentViewController(alert,
-            animated: true,
-            completion: nil)
         
     }
 

@@ -41,14 +41,29 @@
                                     <action selector="getBalance:" destination="8LI-YK-lwr" eventType="touchUpInside" id="O23-t6-SzJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-gI-KQd">
+                                <rect key="frame" x="20" y="110" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="45s-Zz-FCT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xaF-gI-KQd" firstAttribute="top" secondItem="qBA-oC-Lly" secondAttribute="bottom" constant="8" symbolic="YES" id="GEM-AY-sah"/>
                             <constraint firstItem="qBA-oC-Lly" firstAttribute="top" secondItem="asC-tF-s44" secondAttribute="bottom" constant="8" id="USY-0k-e2T"/>
+                            <constraint firstItem="xaF-gI-KQd" firstAttribute="leading" secondItem="qBA-oC-Lly" secondAttribute="leading" id="eSy-dZ-a2R"/>
+                            <constraint firstItem="xaF-gI-KQd" firstAttribute="trailing" secondItem="Vz1-eV-Mwb" secondAttribute="trailingMargin" id="gEO-8d-VeS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="qBA-oC-Lly" secondAttribute="leading" id="pnJ-gr-nLG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PIN Code" id="ipR-1g-Cof"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="xaF-gI-KQd" id="xnm-t3-odV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBI-v8-mLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

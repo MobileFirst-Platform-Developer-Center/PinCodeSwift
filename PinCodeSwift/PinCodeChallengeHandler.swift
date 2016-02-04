@@ -39,6 +39,15 @@ class PinCodeChallengeHandler : WLChallengeHandler {
         showPopup(errorMsg,remainingAttempts: remainingAttempts)
     }
     
+    override func handleFailure(failure: [NSObject : AnyObject]!) {
+        if let errorMsg = failure["failure"] as? String {
+            showError(errorMsg)
+        }
+        else{
+            showError("Unknown error")
+        }
+    }
+    
     func showPopup(errorMsg: String, remainingAttempts: Int){
         let message = errorMsg + "\nRemaining attempts: " + String(remainingAttempts)
         
@@ -65,6 +74,20 @@ class PinCodeChallengeHandler : WLChallengeHandler {
         }
         
         
+    }
+    
+    func showError(errorMsg: String){
+        let alert = UIAlertController(title: "Error",
+            message: errorMsg,
+            preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            let topController = UIApplication.sharedApplication().keyWindow!.rootViewController! as UIViewController
+            topController.presentViewController(alert,
+                animated: true,
+                completion: nil)
+        }
     }
     
     
