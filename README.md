@@ -1,6 +1,6 @@
 IBM MobileFirst Platform Foundation
 ===
-### PinCodeSwift
+## PinCodeSwift
 
 ### Tutorials
 https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/authentication-and-security/security-check-with-attempts/
