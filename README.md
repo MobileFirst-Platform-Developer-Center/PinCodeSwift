@@ -1,10 +1,10 @@
 IBM MobileFirst Platform Foundation
 ===
 ## PinCodeSwift
-A sample application demonstrating use of the WithAttempts Security Check.
+A sample application demonstrating use of the CredentialsValidation Security Check.
 
 ### Tutorials
-https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/authentication-and-security/security-check-with-attempts/
+https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/authentication-and-security/credentials-validation/
 
 ### Usage
 
@@ -12,7 +12,7 @@ https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/authenticat
 2. From a command-line window, navigate to the project's root folder and run the command: `mfpdev app register`.
 3. In the MobileFirst console, under **Applications** → **PinCodeCordova** → **Security** → **Map scope elements to security checks.**, add a mapping from `accessRestricted` to `PinCodeAttempts`.
 
-WithAttempts Security Check/adapter: https://github.com/MobileFirst-Platform-Developer-Center/SecurityAdapters/tree/release80
+CredentialsValidation Security Check adapter: https://github.com/MobileFirst-Platform-Developer-Center/SecurityCheckAdapters/tree/release80
 
 ### Supported Levels
 IBM MobileFirst Platform Foundation 8.0
