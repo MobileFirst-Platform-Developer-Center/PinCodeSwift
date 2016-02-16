@@ -127,7 +127,6 @@ extern NSString* const WL_INIT_PACKAGE;
 extern NSString* const WL_ACTION_PACKAGE;
 extern NSString* const WL_AUTH_PACKAGE;
 extern NSString* const WL_OAUTH_PACKAGE;
-extern NSString* const WL_TRUSTEER_PACKAGE;
 extern NSString* const WL_PUSH_PACKAGE;
 extern NSString* const WL_CONFIG_PACKAGE;
 

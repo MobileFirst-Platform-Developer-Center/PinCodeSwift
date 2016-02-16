@@ -280,6 +280,16 @@ extern NSMutableDictionary *piggyBackData;
  **/
 -(void) pinTrustedCertificatePublicKeyFromFile:(NSString*) certificateFilename;
 
+/*
+ * Sets the device's Display name in the server (calls update registration)
+ */
+-(void) setDeviceDisplayName:(NSString*)deviceDisplayName WithCompletionHandler:(void(^)(NSError* error))completionHandler;
+
+/*
+ * Get the Display name of this device from the MFP server
+ */
+-(void) getDeviceDisplayNameWithCompletionHandler:(void(^)(NSString *deviceDisplayName , NSError *error))completionHandler;
+
 /**
  * Specifies default request time out.
  */

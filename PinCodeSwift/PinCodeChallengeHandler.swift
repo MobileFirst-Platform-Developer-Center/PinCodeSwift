@@ -90,5 +90,8 @@ class PinCodeChallengeHandler : WLChallengeHandler {
         }
     }
     
+    override func handleSuccess(success: [NSObject : AnyObject]!) {
+        NSLog("handleSuccess: %@",success)
+    }
     
 }

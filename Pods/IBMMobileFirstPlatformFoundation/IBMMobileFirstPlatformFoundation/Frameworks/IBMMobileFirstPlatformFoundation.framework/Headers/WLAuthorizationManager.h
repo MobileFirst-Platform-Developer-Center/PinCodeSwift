@@ -58,7 +58,7 @@ withCompletionHandler:(void(^) (NSError* error))completionHandler;
  *
  *  @param NSString - The security check to log in to.
  *  @param NSDictionary - The credentials to use for login to the security check.
- *  @param completionHandler Completion handler containing the response, and error information in case of failure.
+ *  @param completionHandler Completion handler containing the error information in case of failure.
  */
 - (void) login:(NSString *)securityCheck
 withCredentials:(NSDictionary *)credentials

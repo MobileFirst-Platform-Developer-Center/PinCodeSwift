@@ -26,29 +26,6 @@
  */
 + (WLDeviceAuthManager *) sharedInstance;
 
-/*
- * Get the alias used for client user x509 certificate.  Entity is currently not used.
- */
-+ (NSString *) getAlias:(NSString *)entity;
-
-/*
- * Get certififacte Label as used when saved in keychain.
- */
-+ (NSData *) getCertificateIdentifierFromEntity:(NSString *)provisioningEntity;
-
-/*
- * Get private/public key Label as used when saved in keychain.
- */
-+ (NSData *) getKeyIdentifier:(BOOL)isPublic withEntity:(NSString *)provisioningEntity;
-
-/*
- * This method signs on a given content according to JSW standard.
- * We'll using the public key
- * Sign the header and payload with SHA256 / RSA 512 
- * payloadJSON- NSMutableDictionary with the content sign on.
- * return - the signed string.
- */
-+ (NSString *) signDeviceAuth:(NSDictionary *) payloadJSON entity:(NSString *) provisioningEntity isPEnabled:(BOOL) isProvisioningEnabled;
 
 //Call this initializer only
 -(WLDeviceAuthManager *) init;
@@ -56,10 +33,7 @@
 -(NSString *) getWLUniqueDeviceId;
 -(NSDictionary *) getDeviceData;
 
-/*
- * Cleans Device Provisioning Certificate from KeyChain
- */
-+ (BOOL) clearDeviceCertCredentialsFromKeyChain:(NSString *)provisioningEntity;
+
 
 
 @end

@@ -12,33 +12,29 @@
 		<data>
 		ml94T1Q4oRNG3Po1yYxTq9JVWAM=
 		</data>
-		<key>Headers/BaseDeviceAuthChallengeHandler.h</key>
-		<data>
-		OSCOv0wA3oHPs1ZUk/Ngn8eGlXg=
-		</data>
 		<key>Headers/ChallengeHandler.h</key>
 		<data>
 		NSw1l9Qb2AQg/8p0TBSE3WBFD3E=
 		</data>
 		<key>Headers/IBMMobileFirstPlatformFoundation.h</key>
 		<data>
-		7atgW/HvapqNLmca5w0zBq+ldjI=
+		RozoDHPWIhBnZEutT9ANGkAjAzk=
 		</data>
 		<key>Headers/OCLogger+Constants.h</key>
 		<data>
-		RLMiiE+GZ6FqsmOZudyhjv6G1yU=
+		ODhuikPAKfnq5PzZquEdxHBkhAs=
 		</data>
 		<key>Headers/OCLogger.h</key>
 		<data>
-		iL0yjDBwwlX5aBGaiq+N600GciU=
+		qjZlpUJ8f5BSb1Z5xNc91Df/83Y=
 		</data>
 		<key>Headers/WLAnalytics.h</key>
 		<data>
-		3DhJ0UCBQ35zhK35TSuO4ml3Wyw=
+		VJjaI2nw/4pOPQSwPXmfNMnUQ54=
 		</data>
 		<key>Headers/WLAuthorizationManager.h</key>
 		<data>
-		65tzm8Meqty74f2dw5B6nb6qahw=
+		LYfrOsgQ487j6Tf5g0NO56OQxyU=
 		</data>
 		<key>Headers/WLChallengeHandler.h</key>
 		<data>
@@ -46,7 +42,7 @@
 		</data>
 		<key>Headers/WLClient.h</key>
 		<data>
-		OcSsXiyCGLWKB/D8+jmdo+nuG+0=
+		lcWRQCH1Z6wTxZUwaCNwobCdFTk=
 		</data>
 		<key>Headers/WLCookieExtractor.h</key>
 		<data>
@@ -58,7 +54,7 @@
 		</data>
 		<key>Headers/WLDeviceAuthManager.h</key>
 		<data>
-		//SpiCveMgMeInTt/tn0fGqHNaE=
+		z5+r44kCdkKt81vLEaTYcMWsxh0=
 		</data>
 		<key>Headers/WLEventSourceListener.h</key>
 		<data>
@@ -112,17 +108,9 @@
 		<data>
 		e21LoaUHBHJkMvO3kBp9rfK/mDk=
 		</data>
-		<key>Headers/WLTrusteer.h</key>
-		<data>
-		z1tJkBUoxVhBYlLQMWi+qktZkkk=
-		</data>
-		<key>Headers/WLUserCertAuth.h</key>
-		<data>
-		+HFY3Y3MKq4agLejNH/iFI1Geh0=
-		</data>
 		<key>Info.plist</key>
 		<data>
-		9X9Bf9qgDsptIr5ZauQeVcIeRq4=
+		mzVJWQohtIn/M0k3kTjSg9BC8GA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -139,33 +127,29 @@
 		<data>
 		ml94T1Q4oRNG3Po1yYxTq9JVWAM=
 		</data>
-		<key>Headers/BaseDeviceAuthChallengeHandler.h</key>
-		<data>
-		OSCOv0wA3oHPs1ZUk/Ngn8eGlXg=
-		</data>
 		<key>Headers/ChallengeHandler.h</key>
 		<data>
 		NSw1l9Qb2AQg/8p0TBSE3WBFD3E=
 		</data>
 		<key>Headers/IBMMobileFirstPlatformFoundation.h</key>
 		<data>
-		7atgW/HvapqNLmca5w0zBq+ldjI=
+		RozoDHPWIhBnZEutT9ANGkAjAzk=
 		</data>
 		<key>Headers/OCLogger+Constants.h</key>
 		<data>
-		RLMiiE+GZ6FqsmOZudyhjv6G1yU=
+		ODhuikPAKfnq5PzZquEdxHBkhAs=
 		</data>
 		<key>Headers/OCLogger.h</key>
 		<data>
-		iL0yjDBwwlX5aBGaiq+N600GciU=
+		qjZlpUJ8f5BSb1Z5xNc91Df/83Y=
 		</data>
 		<key>Headers/WLAnalytics.h</key>
 		<data>
-		3DhJ0UCBQ35zhK35TSuO4ml3Wyw=
+		VJjaI2nw/4pOPQSwPXmfNMnUQ54=
 		</data>
 		<key>Headers/WLAuthorizationManager.h</key>
 		<data>
-		65tzm8Meqty74f2dw5B6nb6qahw=
+		LYfrOsgQ487j6Tf5g0NO56OQxyU=
 		</data>
 		<key>Headers/WLChallengeHandler.h</key>
 		<data>
@@ -173,7 +157,7 @@
 		</data>
 		<key>Headers/WLClient.h</key>
 		<data>
-		OcSsXiyCGLWKB/D8+jmdo+nuG+0=
+		lcWRQCH1Z6wTxZUwaCNwobCdFTk=
 		</data>
 		<key>Headers/WLCookieExtractor.h</key>
 		<data>
@@ -185,7 +169,7 @@
 		</data>
 		<key>Headers/WLDeviceAuthManager.h</key>
 		<data>
-		//SpiCveMgMeInTt/tn0fGqHNaE=
+		z5+r44kCdkKt81vLEaTYcMWsxh0=
 		</data>
 		<key>Headers/WLEventSourceListener.h</key>
 		<data>
@@ -238,14 +222,6 @@
 		<key>Headers/WLSecurityUtils.h</key>
 		<data>
 		e21LoaUHBHJkMvO3kBp9rfK/mDk=
-		</data>
-		<key>Headers/WLTrusteer.h</key>
-		<data>
-		z1tJkBUoxVhBYlLQMWi+qktZkkk=
-		</data>
-		<key>Headers/WLUserCertAuth.h</key>
-		<data>
-		+HFY3Y3MKq4agLejNH/iFI1Geh0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

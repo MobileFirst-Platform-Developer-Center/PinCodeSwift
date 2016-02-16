@@ -24,7 +24,6 @@ FOUNDATION_EXPORT const unsigned char IBMMobileFirstPlatformFoundationVersionStr
 
 
 #import <IBMMobileFirstPlatformFoundation/BaseChallengeHandler.h>
-#import <IBMMobileFirstPlatformFoundation/BaseDeviceAuthChallengeHandler.h>
 #import <IBMMobileFirstPlatformFoundation/ChallengeHandler.h>
 #import <IBMMobileFirstPlatformFoundation/OCLogger.h>
 #import <IBMMobileFirstPlatformFoundation/OCLogger+Constants.h>
@@ -48,6 +47,4 @@ FOUNDATION_EXPORT const unsigned char IBMMobileFirstPlatformFoundationVersionStr
 #import <IBMMobileFirstPlatformFoundation/WLSecurityUtils.h>
 #import <IBMMobileFirstPlatformFoundation/WLSecurityCommonUtils.h>
 //#import <IBMMobileFirstPlatformFoundation/WLWatchConnectivityManager.h>
-#import <IBMMobileFirstPlatformFoundation/WLTrusteer.h>
-#import <IBMMobileFirstPlatformFoundation/WLUserCertAuth.h>
 //#import <IBMMobileFirstPlatformFoundation/WLCertManagerCommon.h>

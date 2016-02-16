@@ -142,15 +142,6 @@ typedef enum {
  */
 -(void) metadata:(NSDictionary*) metadata fatal: (NSString*) text, ...;
 
-/**
- This method logs at ANALYTICS level.
- @param String message to be logged
- @param metadata Dictionary containing metadata to append to the log output
- @since IBM Worklight V7.1.0
- */
--(void) metadata:(NSDictionary*) metadata analytics: (NSString*) text, ...;
-
-
 //Static methods
 
 /**
