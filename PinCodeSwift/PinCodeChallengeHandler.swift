@@ -27,12 +27,6 @@ class PinCodeChallengeHandler : WLChallengeHandler {
         WLClient.sharedInstance().registerChallengeHandler(PinCodeChallengeHandler(securityCheck: securityCheck))
     }
 
-
-    //Get this registered challenge handler
-    internal static func getRegisteredChallengeHandler()->PinCodeChallengeHandler? {
-        return WLClient.sharedInstance().getChallengeHandlerBySecurityCheck(securityCheck) as? PinCodeChallengeHandler
-    }
-
     override func handleChallenge(challenge: [NSObject : AnyObject]!) {
         NSLog("%@",challenge)
         var errorMsg : String
