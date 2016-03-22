@@ -1,10 +1,10 @@
 PODS:
-  - IBMMobileFirstPlatformFoundation (8.0.78)
+  - IBMMobileFirstPlatformFoundation (8.0.149)
 
 DEPENDENCIES:
   - IBMMobileFirstPlatformFoundation
 
 SPEC CHECKSUMS:
-  IBMMobileFirstPlatformFoundation: 46a8e6b97e56aa415022d50a09ac11402049cd2f
+  IBMMobileFirstPlatformFoundation: 523cd5561aa444478abb98229c7f47a4418c3322
 
 COCOAPODS: 0.39.0
