@@ -17,7 +17,7 @@
 import Foundation
 import IBMMobileFirstPlatformFoundation
 
-class PinCodeChallengeHandler : WLChallengeHandler {
+class PinCodeChallengeHandler : SecurityCheckChallengeHandler {
 
     //SecurityCheck name
     static let securityCheck = "PinCodeAttempts"
@@ -65,7 +65,7 @@ class PinCodeChallengeHandler : WLChallengeHandler {
             self.submitChallengeAnswer(["pin": pinTextField.text!])
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
-            self.submitFailure(nil)
+            self.cancel()
         }))
 
         dispatch_async(dispatch_get_main_queue()) {

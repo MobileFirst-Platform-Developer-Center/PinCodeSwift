@@ -1,2 +1,2 @@
 use_frameworks!
-pod 'IBMMobileFirstPlatformFoundation','~> 8.0.0'
+pod 'IBMMobileFirstPlatformFoundation'
