@@ -22,8 +22,8 @@
 
 
 /**
- * You use this base class to create an IBM MobileFirst Platform Challenge Handler.
- * You must extend this class to implement your own version of an IBM MobileFirst Platform Challenge Handler, for example RemoteDisableChallengeHandler.
+ * You use this base class to create an IBM MobileFirst Platform challenge handler.
+ * You must extend this class to implement your own version of an IBM MobileFirst Platform challenge handler, for example RemoteDisableChallengeHandler.
  */
 @interface SecurityCheckChallengeHandler : BaseChallengeHandler
 
@@ -34,7 +34,7 @@
      */
     -(id) initWithSecurityCheck: (NSString *)securityCheck;
 
-    -(NSString *) securityCheck;
+    @property (readonly) NSString* securityCheck;
 
     /**
      * Send the answer back to the request.
@@ -47,12 +47,12 @@
     * This method is called when the IBM MobileFirst Platform Server reports an authentication success.
     */
     -(void) handleSuccess: (NSDictionary *)success;
-    
+
     /**
     *  This method is called when the IBM MobileFirst Platform Server reports an authentication failure.
     */
     -(void) handleFailure: (NSDictionary *)failure;
-    
+
     /**
     * This method is called when the IBM MobileFirst Platform Server returns a challenge for the realm.
     */

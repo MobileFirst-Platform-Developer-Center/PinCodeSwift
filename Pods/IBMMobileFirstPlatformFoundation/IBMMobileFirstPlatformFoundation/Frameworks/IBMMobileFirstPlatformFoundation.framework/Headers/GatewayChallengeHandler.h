@@ -23,7 +23,7 @@
 #import "WLClient.h"
 
 /**
- * You use this base class to create custom Challenge Handlers when using gateways. You must extend this class to implement your own Challenge Handler logic. You use this class to create custom user authentication with external gateways.
+ * You use this base class to create custom challenge handlers when using gateways. You must extend this class to implement your own challenge handler logic. You use this class to create custom user authentication with external gateways.
  */
 @interface GatewayChallengeHandler : BaseChallengeHandler<WLDelegate> {
     @private
@@ -64,7 +64,7 @@
 
 /**
  * You use this method to send collected credentials to a specific URL. You can also specify request parameters, headers, and timeout.
- * 
+ *
  * The success/failure delegate for this method is the instance itself, which is why you must override the onSuccess / onFailure methods.
  *
  * @param requestUrl Absolute URL if the user sends an absolute url that starts with http:// or https:// Otherwise, URL relative to the IBM MobileFirst Platform Server
@@ -78,15 +78,15 @@
 
 /**
  * This method is the success delegate for submitLoginForm
- * 
+ *
  * This method is called when a successful HTTP response is received (200 OK). This method does not indicate whether the challenge was successful or not. A 200 HTTP response can flow back indicating problems with authentication on the server or requesting additional information.
- * 
+ *
  * Some examples of a 200 HTTP response are as follows:
- * 
+ *
  *  - First init request returns a normal 200 HTTP response that requests a pkms login form
  * Authentication failed on the server.
  *  - A 200 HTTP response, indicating that the account is locked on the server due to too many failed login attempts.
- * 
+ *
  * This is a good place to check whether the response is a custom response and handle it accordingly. If the response is not a custom response, you can call submitSuccess to indicate that all is good from your challenge handler's perspective, and that IBM MobileFirst Platform can handle the response instead.
  * @note  IBM MobileFirst Platform does not attempt to determine what the 200 response means.
  * @param response The received response.
@@ -96,13 +96,13 @@
 
 /**
  * This method is the failure delegate for submitLoginForm
- * 
+ *
  * This method is called when a response does not have a 200 HTTP status code. This method does not indicate whether the challenge was successful or not. In some cases onFailure is an indication of a normal challenge handling sequence.
- * 
+ *
  * An example of when the onFailure method is called is when a 401 Unauthorized response is received.
- * 
+ *
  * A successful handshake can entail several 401 response iterations and therefore several onFailure calls. This behavior is all part of the normal handshake between two parties that are trying to establish identity. IBM MobileFirst Platform handles the handshakes for core challenges iteratively until all of the credentials are established and the necessary challenges are processed.
- * 
+ *
  * This is a good place to check whether the response is a custom response and handle it accordingly. If the response is not a custom response, you can call submitSuccess to indicate that all is good from your challenge handler's perspective, and that IBM MobileFirst Platform can handle the response instead.
  *
  * @param response The received fail response.
