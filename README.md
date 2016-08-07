@@ -13,6 +13,7 @@ https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/authenticat
  The PinCodeAttempts Security Check adapter can be found in https://github.com/MobileFirst-Platform-Developer-Center/SecurityCheckAdapters/tree/release80.
 
 2. From a command-line window, navigate to the project's root folder and run the commands:
+ - `pod update` followed by `pod install` - to add the MobileFirst SDK.
  - `mfpdev app register` - to register the application.
  - `mfpdev app push` - to map the `accessRestricted` scope to the `PinCodeAttempts` security check.
 
