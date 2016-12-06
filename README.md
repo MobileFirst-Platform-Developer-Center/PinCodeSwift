@@ -17,6 +17,8 @@ https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/authenticat
  - `mfpdev app register` - to register the application.
  - `mfpdev app push` - to map the `accessRestricted` scope to the `PinCodeAttempts` security check.
 
+3. Run the application in the iOS Simulator or physical device. Press the **Get Balance** button and enter "1234" to display the balance.
+4. 
 > **Tip:** you can update the bundled SDK by running the command `pod update` from the project's root folder.
 
 ### Supported Levels
