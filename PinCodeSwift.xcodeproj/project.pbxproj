@@ -27,6 +27,7 @@
 		19643DDD1C620A200055D883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19643DE31C620BE70055D883 /* mfpclient.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mfpclient.plist; sourceTree = "<group>"; };
 		19643DE51C6217380055D883 /* PinCodeChallengeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeChallengeHandler.swift; sourceTree = "<group>"; };
+		19C4BD4B1DF6A07B00C1C171 /* PinCodeSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PinCodeSwift.entitlements; sourceTree = "<group>"; };
 		4656CFF302C17A6F1A531937 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA00E62FBE8B931A2ADAABC /* Pods-PinCodeSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinCodeSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinCodeSwift/Pods-PinCodeSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		B90425E57D1E021D3E29FD99 /* Pods_PinCodeSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinCodeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +68,7 @@
 		19643DD01C620A200055D883 /* PinCodeSwift */ = {
 			isa = PBXGroup;
 			children = (
+				19C4BD4B1DF6A07B00C1C171 /* PinCodeSwift.entitlements */,
 				19643DD11C620A200055D883 /* AppDelegate.swift */,
 				19643DD31C620A200055D883 /* ViewController.swift */,
 				19643DD51C620A200055D883 /* Main.storyboard */,
@@ -131,6 +133,12 @@
 				TargetAttributes = {
 					19643DCD1C620A200055D883 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -335,11 +343,14 @@
 			baseConfigurationReference = 7BA00E62FBE8B931A2ADAABC /* Pods-PinCodeSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PinCodeSwift/PinCodeSwift.entitlements;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PinCodeSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.PinCodeSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -348,11 +359,14 @@
 			baseConfigurationReference = CA19812F6E40499BADF400A0 /* Pods-PinCodeSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PinCodeSwift/PinCodeSwift.entitlements;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PinCodeSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.PinCodeSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
