@@ -30,16 +30,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func getBalance(sender: UIButton) {
-        let request = WLResourceRequest(URL: NSURL(string: "/adapters/ResourceAdapter/balance"), method: WLHttpMethodGet)
-        request.sendWithCompletionHandler { (response, error) -> Void in
+    @IBAction func getBalance(_ sender: UIButton) {
+        let request = WLResourceRequest(url: URL(string: "/adapters/ResourceAdapter/balance"), method: WLHttpMethodGet)
+        request?.send { (response, error) -> Void in
             if(error == nil){
-                NSLog(response.responseText)
-                self.balanceLabel.text = "Balance = " + response.responseText
+                NSLog((response?.responseText)!)
+                self.balanceLabel.text = "Balance = " + (response?.responseText)!
 
             }
             else{
-                NSLog(error.description)
+                NSLog(error as! String)
                 self.balanceLabel.text = "Failed to get balance"
             }
         }
