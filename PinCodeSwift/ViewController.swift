@@ -39,7 +39,7 @@ class ViewController: UIViewController {
 
             }
             else{
-                NSLog(error as! String)
+                NSLog(error.debugDescription)
                 self.balanceLabel.text = "Failed to get balance"
             }
         }
