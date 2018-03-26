@@ -27,7 +27,7 @@ class PinCodeChallengeHandler : SecurityCheckChallengeHandler {
         WLClient.sharedInstance().registerChallengeHandler(PinCodeChallengeHandler(securityCheck: securityCheck))
     }
 
-    override func handleChallenge(challenge: [NSObject : AnyObject]!) {
+    override func handleChallenge(_ challenge: [AnyHashable: Any]!) {
         NSLog("%@",challenge)
         var errorMsg : String
         if challenge["errorMsg"] is NSNull {
@@ -41,7 +41,7 @@ class PinCodeChallengeHandler : SecurityCheckChallengeHandler {
         showPopup(errorMsg,remainingAttempts: remainingAttempts)
     }
 
-    override func handleFailure(failure: [NSObject : AnyObject]!) {
+    override func handleFailure(_ failure: [AnyHashable: Any]!) {
         if let errorMsg = failure["failure"] as? String {
             showError(errorMsg)
         }
@@ -50,27 +50,27 @@ class PinCodeChallengeHandler : SecurityCheckChallengeHandler {
         }
     }
 
-    func showPopup(errorMsg: String, remainingAttempts: Int){
+    func showPopup(_ errorMsg: String, remainingAttempts: Int){
         let message = errorMsg + "\nRemaining attempts: " + String(remainingAttempts)
 
         let alert = UIAlertController(title: "Protected",
             message: message,
-            preferredStyle: .Alert)
-        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            preferredStyle: .alert)
+        alert.addTextField { (textField) -> Void in
             textField.placeholder = "PIN CODE"
-            textField.keyboardType = .NumberPad
+            textField.keyboardType = .numberPad
         }
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
             let pinTextField = alert.textFields![0] as UITextField
             self.submitChallengeAnswer(["pin": pinTextField.text!])
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
             self.cancel()
         }))
 
-        dispatch_async(dispatch_get_main_queue()) {
-            let topController = UIApplication.sharedApplication().keyWindow!.rootViewController! as UIViewController
-            topController.presentViewController(alert,
+        DispatchQueue.main.async {
+            let topController = UIApplication.shared.keyWindow!.rootViewController! as UIViewController
+            topController.present(alert,
                 animated: true,
                 completion: nil)
         }
@@ -78,21 +78,21 @@ class PinCodeChallengeHandler : SecurityCheckChallengeHandler {
 
     }
 
-    func showError(errorMsg: String){
+    func showError(_ errorMsg: String){
         let alert = UIAlertController(title: "Error",
             message: errorMsg,
-            preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
-        dispatch_async(dispatch_get_main_queue()) {
-            let topController = UIApplication.sharedApplication().keyWindow!.rootViewController! as UIViewController
-            topController.presentViewController(alert,
+        DispatchQueue.main.async {
+            let topController = UIApplication.shared.keyWindow!.rootViewController! as UIViewController
+            topController.present(alert,
                 animated: true,
                 completion: nil)
         }
     }
 
-    override func handleSuccess(success: [NSObject : AnyObject]!) {
+    override func handleSuccess(_ success: [AnyHashable: Any]!) {
         NSLog("handleSuccess: %@",success)
     }
 
