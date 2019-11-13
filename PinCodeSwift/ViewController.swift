@@ -15,7 +15,7 @@
 */
 
 import UIKit
-import IBMMobileFirstPlatformFoundation
+import IBMMobileFoundationSwift
 
 class ViewController: UIViewController {
     @IBOutlet weak var balanceLabel: UILabel!
@@ -31,12 +31,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func getBalance(_ sender: UIButton) {
-        let request = WLResourceRequest(url: URL(string: "/adapters/ResourceAdapter/balance"), method: WLHttpMethodGet)
-        request?.send { (response, error) -> Void in
+        let request = WLResourceRequestSwift.init(url: URL(string: "/adapters/ResourceAdapter/balance")!, method: WLResourceRequestSwift.WLHttpMethodGet)
+        request.send { (response, error) -> Void in
             if(error == nil){
                 NSLog((response?.responseText)!)
                 self.balanceLabel.text = "Balance = " + (response?.responseText)!
-
+                
             }
             else{
                 NSLog(error.debugDescription)
