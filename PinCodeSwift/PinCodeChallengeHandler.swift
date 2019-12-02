@@ -15,34 +15,34 @@
 */
 
 import Foundation
-import IBMMobileFirstPlatformFoundation
+import IBMMobileFoundationSwift
 
-class PinCodeChallengeHandler : SecurityCheckChallengeHandler {
+class PinCodeChallengeHandler : SecurityCheckChallengeHandlerSwift {
 
     //SecurityCheck name
     static let securityCheck = "PinCodeAttempts"
 
     //Register this class as a challenge handler
     static func registerSelf() {
-        WLClient.sharedInstance().registerChallengeHandler(PinCodeChallengeHandler(securityCheck: securityCheck))
+        WLClientSwift.sharedInstance().registerChallengeHandler(challengeHandler: PinCodeChallengeHandler(securityCheck: securityCheck))
     }
 
-    override func handleChallenge(_ challenge: [AnyHashable: Any]!) {
-        NSLog("%@",challenge)
-        var errorMsg : String
-        if challenge["errorMsg"] is NSNull {
+    override open func handleChallenge(challengeResponse: [AnyHashable: Any]!) {
+        NSLog("%@",challengeResponse);
+        var errorMsg : String;
+        if challengeResponse!["errorMsg"] is NSNull {
             errorMsg = "This data requires a PIN code."
         }
         else{
-            errorMsg = challenge["errorMsg"] as! String
+            errorMsg = challengeResponse!["errorMsg"] as! String
         }
-        let remainingAttempts = challenge["remainingAttempts"] as! Int
+        let remainingAttempts = challengeResponse!["remainingAttempts"] as! Int;
 
         showPopup(errorMsg,remainingAttempts: remainingAttempts)
     }
 
-    override func handleFailure(_ failure: [AnyHashable: Any]!) {
-        if let errorMsg = failure["failure"] as? String {
+    override open func handleFailure(failureResponse: [AnyHashable: Any]!) {
+        if let errorMsg = failureResponse["failure"] as? String {
             showError(errorMsg)
         }
         else{
@@ -92,8 +92,8 @@ class PinCodeChallengeHandler : SecurityCheckChallengeHandler {
         }
     }
 
-    override func handleSuccess(_ success: [AnyHashable: Any]!) {
-        NSLog("handleSuccess: %@",success)
+    override open func handleSuccess(successResponse: [AnyHashable: Any]!) {
+        NSLog("handleSuccess: %@",successResponse);
     }
 
 }
